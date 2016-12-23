@@ -27,6 +27,9 @@ public class ThreeDESDemo {
 
     public static void jdk3DES() throws NoSuchAlgorithmException, InvalidKeyException, InvalidKeySpecException, NoSuchPaddingException, BadPaddingException, IllegalBlockSizeException {
 
+        /**
+         *
+         */
         KeyGenerator keyGenerator = KeyGenerator.getInstance("DESede");
         keyGenerator.init(new SecureRandom());
         SecretKey secretKey = keyGenerator.generateKey();

@@ -1,6 +1,7 @@
 package messageDigest;
 
 import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -16,6 +17,7 @@ public class SHA1Demo {
 
     public static void main(String[] args) {
         jdkSHA1();
+        commonsCodecShA1();
 
     }
 
@@ -31,5 +33,13 @@ public class SHA1Demo {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void commonsCodecShA1(){
+        String de = DigestUtils.sha1Hex(string);
+        System.out.println("sha1:"+de);
+        MessageDigest digest = DigestUtils.getSha1Digest();
+        digest.update(string.getBytes());
+        System.out.println("sha1:" + Hex.encodeHexString(digest.digest()));
     }
 }
