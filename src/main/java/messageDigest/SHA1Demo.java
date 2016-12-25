@@ -24,7 +24,7 @@ public class SHA1Demo {
     /**
      * jdk 实现 SHA1
      */
-    public static void jdkSHA1(){
+    private static void jdkSHA1(){
 
         try {
             MessageDigest md = MessageDigest.getInstance("SHA");
@@ -35,7 +35,7 @@ public class SHA1Demo {
         }
     }
 
-    public static void commonsCodecShA1(){
+    private static void commonsCodecShA1(){
         String de = DigestUtils.sha1Hex(string);
         System.out.println("sha1:"+de);
         MessageDigest digest = DigestUtils.getSha1Digest();

@@ -3,7 +3,6 @@ package encryption;
 import org.apache.commons.codec.binary.Hex;
 
 import javax.crypto.*;
-import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.DESedeKeySpec;
 import java.security.InvalidKeyException;
 import java.security.Key;
